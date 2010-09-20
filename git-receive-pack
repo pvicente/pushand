@@ -8,7 +8,9 @@ if [[ ! -d "$repo" ]]; then
 	mkdir -pv "$repo" > /dev/null
 	cd "$repo"
 	git init > /dev/null
-	# remove .git/hooks/post-receive if it exists (which it will in certain git versions)
+  git config core.bare false
+  git config receive.denycurrentbranch ignore
+  # remove .git/hooks/post-receive if it exists (which it will in certain git versions)
 	if [[ -f .git/hooks/post-receive ]]; then
 		rm .git/hooks/post-receive
 	fi
