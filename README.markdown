@@ -1,20 +1,22 @@
 PushAnd
 =======
 
-A tiny set of BASH scripts that makes it easy to **push** a git repository **and** ... do something!
+A tiny set of BASH scripts that makes it easy to **push** a git
+repository **and** ... do something!
 
-If you setup pushand, your server will accept pushes from arbitrary git repositories and, if a `.pushand` script exists in the root of the pushed repository, it will run that script on the server.
+If you setup pushand, your server will accept pushes from arbitrary git
+repositories and, if a `.pushand` script exists in the root of the
+pushed repository, it will run that script on the server.
 
 That's all!
 
 Install
 -------
 
-    $ git clone git://github.com/remi/pushand.git
-    $ cd pushand
-    $ sudo ./pushand_server_install
+    $ git clone git://github.com/fesplugas/pushand.git
+    $ sudo ./pushand/install.sh
 
-To uninstall, you can run `sudo ./pushand_server_uninstall`
+To uninstall, you can run `sudo ./pushand/uninstall.sh`
 
 Usage
 -----
