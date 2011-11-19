@@ -3,6 +3,17 @@
 # Prepare the current repository to be able to be deployed. In the
 # future we should be able to set variables from a configuration file.
 
+# Somehow I want to test this is working:
+if [[ -f 'templates/deploy.sh' ]]; then
+  CONFIG_FILE='templates/deploy.sh'
+else
+  CONFIG_FILE='config/deploy.sh'
+fi
+
+if [[ -f $CONFIG_FILE ]]; then
+  source $CONFIG_FILE
+fi
+
 # TODO: $SERVER could be a collection of servers.
 # Set $SERVER:
 if [ ! $SERVER ]; then
