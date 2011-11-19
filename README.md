@@ -18,12 +18,12 @@ To install:
 
     git clone git://github.com/fesplugas/pushand.git
     cd pushand
-    make install
+    ./bin/pushand install
 
 To uninstall:
 
     cd pushand
-    make uninstall
+    ./bin/pushand uninstall
 
 Usage
 -----
