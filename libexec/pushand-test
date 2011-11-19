@@ -12,8 +12,8 @@ ssh $SERVER <<EOF
 pushd \$(mktemp -d /tmp/pushand.install.XXXXXXXXXX)
   git clone git://github.com/fesplugas/pushand.git
   cd pushand
-  ./bin/pushand uninstall
-  ./bin/pushand install
+  sudo ./bin/pushand uninstall
+  sudo ./bin/pushand install
 popd
 EOF
 

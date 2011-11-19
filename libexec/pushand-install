@@ -4,7 +4,7 @@
 # repository is pushed to the computer, the repository is created
 # locally and, if it contains a .pushand script, it will run it.
 
-source "$(dirname $0)/pushand_server_variables"
+source "$(pwd)/libexec/pushand-server-variables"
 
 if [[ -f "$real_script_new_path" ]]; then
 	echo "$real_script_new_path already exists"

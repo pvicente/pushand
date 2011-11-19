@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source "$(dirname $0)/pushand_server_variables"
+source "$(pwd)/libexec/pushand-server-variables"
 
 if [[ -f "$real_script_new_path" ]]; then
 	if [[ ! -f "$real_script_path" ]]; then
