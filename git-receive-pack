@@ -18,6 +18,6 @@ if [[ ! -d "$repo" ]]; then
 	cd "$go_back"
 fi
 
-# make the real call to the real git-receive-pack
-# TODO make this dynamic!  using the pushand_server_variables
+# TODO: make this dynamic using the pushand_server_variables.
+# Make the real call to the real git-receive-pack:
 /usr/bin/git-receive-pack_original/git-receive-pack $*
