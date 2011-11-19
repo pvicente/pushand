@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Prepare the current repository to be able to be deployed. In the
+# future we should be able to set variables from a configuration file.
+
+# TODO: $SERVER could be a collection of servers.
+# Set $SERVER:
+if [ ! $SERVER ]; then
+  echo "\$SERVER is not set."
+  exit
+fi
+
+# Set $DEPLOY_TO:
+if [ ! $DEPLOY_TO ]; then
+  echo "\$DEPLOY_TO is not set."
+  exit
+fi
+
+# Setting up you repository to be deployed with `pushand':
+git remote rm pushand
+git config --local --add remote.pushand.url $SERVER:$DEPLOY_TO
+
+# Show configuration:
+git config --local --list
