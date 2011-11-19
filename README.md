@@ -58,3 +58,36 @@ Push the repo to the pushand enabled server:
     remote: Hello from .pushand ... this file is /tmp/random-repo/.pushand
     To deploy@labs.francescesplugas.com:/tmp/random-repo
      * [new branch]      master -> master
+
+
+Examples
+--------
+
+Pushand Examples
+================
+
+Considering we are running a `Rails` application under `passenger` and
+you are using `Bundler`, your `.pushand` file will look like this:
+
+    #!/bin/bash
+
+    bundle install --deployment
+    bundle exec rake db:migrate
+    touch tmp/restart.txt
+
+
+Considering we are running a `Django` application under `passenger` and
+you are using `Virtualenv`, your `.pushand` file will look like this:
+
+    #!/bin/bash
+
+    pip install --environment vendor/virtualenv --requirement Virtualenv
+
+    source vendor/virtualenv/bin/activate
+    pushd <YOUR_DJANGO_PROJECT>
+      python manage.py syncdb
+      python manage.py collectstatic --noinput
+    popd
+    deactivate
+
+    touch tmp/restart.txt
