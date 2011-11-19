@@ -4,8 +4,8 @@ You need to install first `pushand` on your server.
 
 ## Rails
 
-Considering you have `rvm` installed on your server you only need to create
-a `.pushand` file on your Rails project.
+Considering we are running a `Rails` application under `passenger` and
+you are using `Bunlder`:
 
     #!/bin/bash
 
