@@ -32,7 +32,7 @@ Usage
     chmod +x .pushand
     git add .
     git commit -a -m "init repo"
-    git remote add origin fesplugas@localhost:/home/fesplugas/random-repo.git
+    git remote add origin fesplugas@localhost:/tmp/random-repo.git
     git push origin master
     Counting objects: 3, done.
     Writing objects: 100% (3/3), 238 bytes, done.
