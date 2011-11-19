@@ -24,20 +24,21 @@ Usage
     mkdir random-repo
     cd random-repo
     git init
-    vi .pushand
-
-      #! /bin/bash
-      echo "Hello from .pushand ... this file is $0"
-
+    cat > .pushand << EOF
+    #!/bin/bash
+    echo "Hello from .pushand ... this file is \$0"
+    EOF
     chmod +x .pushand
     git add .
-    git commit -a -m "init repo"
-    git remote add origin fesplugas@localhost:/tmp/random-repo.git
+    git commit -a -m "First Commit"
+    git remote add origin deploy@labs.francescesplugas.com:/tmp/random-repo
     git push origin master
     Counting objects: 3, done.
-    Writing objects: 100% (3/3), 238 bytes, done.
+    Delta compression using up to 2 threads.
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (3/3), 275 bytes, done.
     Total 3 (delta 0), reused 0 (delta 0)
-    To fesplugas@localhost:/home/fesplugas/random-repo.git
+    remote: HEAD is now at b8a1656 First Commit
+    remote: Hello from .pushand ... this file is /tmp/random-repo/.pushand
+    To deploy@labs.francescesplugas.com:/tmp/random-repo
      * [new branch]      master -> master
-     Checked out master branch
-     Hello from .pushand ... this file is /home/fesplugas/random-repo.git/.pushand
