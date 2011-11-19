@@ -23,7 +23,7 @@ pushd $(mktemp -d /tmp/pushand.XXXXXXXXXX)
   echo "=> Create a '.pushand' file and make it executable:"
   cat > \.pushand << EOF
 #!/bin/bash
-echo "Hello from .pushand ... this file is \$0"
+echo "Hello from '.pushand' ... this file is \$0"
 EOF
   chmod +x \.pushand
 
