@@ -1,6 +1,11 @@
 #!/bin/bash
 
-SERVER='fesplugas@labs.francescesplugas.com'
+if [ $1 ]; then
+  SERVER=$1
+else
+  echo "Please provide the server to test. (Eg. deploy@example.com)"
+  exit
+fi
 
 echo "=> Connect to '$SERVER' server and install pushand:"
 ssh $SERVER <<EOF
