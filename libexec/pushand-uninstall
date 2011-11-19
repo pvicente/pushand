@@ -1,6 +1,4 @@
-#!/bin/bash
-
-# Undoes what install.sh does.
+#!/usr/bin/env bash
 
 source "$(dirname $0)/pushand_server_variables"
 

@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+set -e
+[ -n "$PUSHAND_DEBUG" ] && set -x
+
+resolve_link() {
+  $(type -p greadlink readlink | head -1) $1
+}
+
+abs_dirname() {
+  local cwd="$(pwd)"
+  local path="$1"
+
+  while [ -n "$path" ]; do
+    cd "${path%/*}"
+    local name="${path##*/}"
+    path="$(resolve_link "$name" || true)"
+  done
+
+  pwd
+  cd "$cwd"
+}
+
+bin_path="$(abs_dirname "$0")"
+export PATH="${bin_path}:${PATH}"
+
+command="$1"
+case "$command" in
+"" | "-h" | "--help" )
+  echo -e "pushand 0.1.0\n$(pushand-help)" >&2
+  ;;
+* )
+  command_path="$(command -v "pushand-$command" || true)"
+  if [ -z "$command_path" ]; then
+    echo $command_path
+    echo "pushand: no such command \`$command'" >&2
+    exit 1
+  fi
+
+  shift 1
+  exec "$command_path" "$@"
+  ;;
+esac

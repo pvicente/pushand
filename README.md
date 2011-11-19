@@ -14,11 +14,16 @@ That's all!
 Install
 -------
 
+To install:
+
     git clone git://github.com/fesplugas/pushand.git
-    sudo ./pushand/install.sh
+    cd pushand
+    make install
 
-To uninstall, run `sudo ./pushand/uninstall.sh`.
+To uninstall:
 
+    cd pushand
+    make uninstall
 
 Usage
 -----
