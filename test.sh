@@ -28,11 +28,9 @@ EOF
   git add .
   git commit -m 'First Commit'
 
-  echo "=> Add a remote to git:"
+  echo "=> Add a remote to git and verify it's correct:"
   git remote add pushand $SERVER:$(pwd)
-
-  echo "=> Verify git config:"
-  cat .git/config
+  git remote -v
 
   echo "=> Push the repo:"
   git push pushand master
