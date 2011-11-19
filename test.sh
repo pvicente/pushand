@@ -2,8 +2,6 @@
 
 SERVER='fesplugas@labs.francescesplugas.com'
 
-BASEDIR=$(dirname $0)
-
 echo "=> Connect to '$SERVER' server and install pushand:"
 ssh $SERVER <<EOF
 pushd \$(mktemp -d /tmp/pushand.install.XXXXXXXXXX)
