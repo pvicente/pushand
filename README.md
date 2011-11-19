@@ -63,9 +63,6 @@ Push the repo to the pushand enabled server:
 Examples
 --------
 
-Pushand Examples
-================
-
 Considering we are running a `Rails` application under `passenger` and
 you are using `Bundler`, your `.pushand` file will look like this:
 
