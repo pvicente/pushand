@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # Undoes what install.sh does.
 

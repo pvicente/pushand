@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # Overrides git-receive-pack on the current computer so,  when a
 # repository is pushed to the computer, the repository is created
