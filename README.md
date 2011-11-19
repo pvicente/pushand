@@ -10,6 +10,7 @@ pushed repository, it will run that script on the server.
 
 That's all!
 
+
 Install
 -------
 
@@ -17,6 +18,7 @@ Install
     sudo ./pushand/install.sh
 
 To uninstall, run `sudo ./pushand/uninstall.sh`.
+
 
 Usage
 -----

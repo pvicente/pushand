@@ -1,8 +1,11 @@
-# Pushand Examples
+Pushand Examples
+================
 
 You need to install first `pushand` on your server.
 
-## Rails
+
+Rails
+-----
 
 Considering we are running a `Rails` application under `passenger` and
 you are using `Bunlder`:
@@ -13,7 +16,9 @@ you are using `Bunlder`:
     bundle exec rake db:migrate
     touch tmp/restart.txt
 
-## Django
+
+Django
+------
 
 Considering we are running a `Django` application under `passenger` and
 you are using `Virtualenv`:
