@@ -8,7 +8,7 @@ Rails
 -----
 
 Considering we are running a `Rails` application under `passenger` and
-you are using `Bunlder`:
+you are using `Bundler`:
 
     #!/bin/bash
 
