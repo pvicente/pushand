@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo "Hello from '.pushand' ... this file is $0"
