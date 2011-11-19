@@ -1,11 +1,8 @@
 Pushand
 =======
 
-A tiny set of BASH scripts that makes it easy to **push** a git
-repository **and** ... do something!
-
-If you setup pushand, your server will accept pushes from arbitrary git
-repositories and, if a `.pushand` script exists in the root of the
+If you setup **pushand**, your server will accept pushes from arbitrary
+git repositories and, if a `.pushand` script exists in the root of the
 pushed repository, it will run that script on the server.
 
 That's all!
