@@ -8,3 +8,13 @@ our_script_path="$(dirname $0)/git-receive-pack"
 
 post_receive_hook_path="$(dirname $0)/post-receive"
 post_receive_hook_new_path="$real_script_dir/pushand_post-receive_hook"
+
+if [ $DEBUG ]; then
+  echo $real_script_path
+  echo $real_script_dir
+  echo $real_script_new_dir
+  echo $real_script_new_path
+  echo $our_script_path
+  echo $post_receive_hook_path
+  echo $post_receive_hook_new_path
+fi
