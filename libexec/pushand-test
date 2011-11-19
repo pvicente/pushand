@@ -11,8 +11,9 @@ echo "=> Connect to '$SERVER' server and install pushand:"
 ssh $SERVER <<EOF
 pushd \$(mktemp -d /tmp/pushand.install.XXXXXXXXXX)
   git clone git://github.com/fesplugas/pushand.git
-  sudo ./pushand/uninstall.sh
-  sudo ./pushand/install.sh
+  cd pushand
+  make uninstall
+  make install
 popd
 EOF
 
