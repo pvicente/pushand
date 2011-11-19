@@ -37,7 +37,7 @@ Create a `random-repo` and initialize git:
 Create a `.pushand` file and make it executable:
 
     cat > .pushand << EOF
-    #!/bin/bash
+    #!/usr/bin/env bash
     echo "Hello from .pushand ... this file is \$0"
     EOF
     chmod +x .pushand
@@ -71,7 +71,7 @@ Examples
 Considering we are running a `Rails` application under `passenger` and
 you are using `Bundler`, your `.pushand` file will look like this:
 
-    #!/bin/bash
+    #!/usr/bin/env bash
 
     bundle install --deployment
     bundle exec rake db:migrate
@@ -81,7 +81,7 @@ you are using `Bundler`, your `.pushand` file will look like this:
 Considering we are running a `Django` application under `passenger` and
 you are using `Virtualenv`, your `.pushand` file will look like this:
 
-    #!/bin/bash
+    #!/usr/bin/env bash
 
     pip install --environment vendor/virtualenv --requirement Virtualenv
 
