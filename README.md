@@ -77,7 +77,6 @@ you are using `Bundler`, your `.pushand` file will look like this:
     bundle exec rake db:migrate
     touch tmp/restart.txt
 
-
 Considering we are running a `Django` application under `passenger` and
 you are using `Virtualenv`, your `.pushand` file will look like this:
 
