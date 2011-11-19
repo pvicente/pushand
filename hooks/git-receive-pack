@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 repo="$1"
 post_receive_hook_script="$(dirname $0)/pushand_post-receive_hook"
