@@ -23,18 +23,32 @@ To uninstall, run `sudo ./pushand/uninstall.sh`.
 Usage
 -----
 
+Create a `random-repo` and initialize git:
+
     mkdir random-repo
     cd random-repo
     git init
+
+Create a `.pushand` file and make it executable:
+
     cat > .pushand << EOF
     #!/bin/bash
     echo "Hello from .pushand ... this file is \$0"
     EOF
     chmod +x .pushand
+
+Add `.pushand` to git:
+
     git add .
     git commit -a -m "First Commit"
-    git remote add origin deploy@labs.francescesplugas.com:/tmp/random-repo
-    git push origin master
+
+Add a remote to git (this is where we are going to deploy the app):
+
+    git remote add pushand deploy@labs.francescesplugas.com:/tmp/random-repo
+
+Push the repo to the pushand enabled server:
+
+    git push pushand master
     Counting objects: 3, done.
     Delta compression using up to 2 threads.
     Compressing objects: 100% (2/2), done.
