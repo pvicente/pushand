@@ -6,7 +6,7 @@ post_receive_hook_script="$(dirname $0)/pushand_post-receive_hook"
 # If the remote repository doesn't exist, create it:
 if [[ ! -d "$repo" ]]; then
   go_back="$(pwd)"
-  mkdir -pv "$repo" > /dev/null
+  mkdir -p $repo
 
   cd "$repo"
 
