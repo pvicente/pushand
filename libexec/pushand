@@ -34,7 +34,6 @@ case "$command" in
 * )
   command_path="$(command -v "pushand-$command" || true)"
   if [ -z "$command_path" ]; then
-    echo $command_path
     echo "pushand: no such command \`$command'" >&2
     exit 1
   fi
