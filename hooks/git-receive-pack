@@ -16,9 +16,7 @@ if [[ ! -d "$repo" ]]; then
   git config receive.denycurrentbranch ignore
 
   # Remove '.git/hooks/post-receive' if it exists: (which it will in certain git versions)
-  if [[ -f '.git/hooks/post-receive' ]]; then
-    rm .git/hooks/post-receive
-  fi
+  rm -f .git/hooks/post-receive
 
   ln -s $post_receive_hook_script .git/hooks/post-receive > /dev/null
   cd "$go_back"
