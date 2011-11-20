@@ -69,7 +69,6 @@ you are using `Bundler`, your `.pushand` file will look like this:
     #!/usr/bin/env bash
 
     bundle install --deployment
-    bundle exec rake db:migrate
     touch tmp/restart.txt
 
 Considering we are running a `Django` application under `passenger` and
