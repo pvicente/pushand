@@ -4,6 +4,7 @@ if [ $1 ]; then
   SERVER=$1
 else
   echo "Please provide the server to test. (Eg. deploy@example.com)"
+  echo "Remember setting the option NO_PUSHAND disables '.pushand' command."
   exit
 fi
 
