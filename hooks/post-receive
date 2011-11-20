@@ -9,7 +9,8 @@ output=`git --work-tree=$working_dir checkout master 2>&1`
 cd ..
 env -i git reset --hard
 
-# If the repository has a file called '.pushand' then run it:
+# If the repository has a file called '.pushand' then run it otherwise
+# inform the user:
 if [ -f "$repo_script" ]; then
   chmod +x $repo_script
   exec "$repo_script"
