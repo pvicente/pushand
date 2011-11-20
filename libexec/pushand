@@ -3,6 +3,8 @@
 set -e
 [ -n "$PUSHAND_DEBUG" ] && set -x
 
+VERSION='0.1.0'
+
 resolve_link() {
   $(type -p greadlink readlink | head -1) $1
 }
@@ -27,7 +29,7 @@ export PATH="${bin_path}:${PATH}"
 command="$1"
 case "$command" in
 "" | "-h" | "--help" )
-  echo -e "pushand 0.1.0\n$(pushand-help)" >&2
+  echo -e "pushand $VERSION\n$(pushand-help)" >&2
   ;;
 * )
   command_path="$(command -v "pushand-$command" || true)"
