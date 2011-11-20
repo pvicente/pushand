@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+pip install --environment vendor/virtualenv --requirement Virtualenv
+
+source vendor/virtualenv/bin/activate
+pushd <YOUR_DJANGO_PROJECT>
+  python manage.py syncdb
+  python manage.py collectstatic --noinput
+popd
+deactivate
+
+touch tmp/restart.txt

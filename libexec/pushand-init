@@ -2,3 +2,6 @@
 
 # TODO: Copy `templates/deploy.sh` into the current project. It should
 #       create a config folder, and an executable `.pushand` file.
+
+# TODO: Accept a param so we can copy one of the pushand templates to
+#       the current application folder.

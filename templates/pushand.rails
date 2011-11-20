@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+bundle install --deployment
+bundle exec rake db:migrate
+touch tmp/restart.txt
