@@ -26,7 +26,6 @@ pushd $(mktemp -d /tmp/pushand.XXXXXXXXXX)
 #!/usr/bin/env bash
 echo "Hello from '.pushand' ... this file is \$0"
 EOF
-  chmod +x \.pushand
 
   echo "=> Add file to git and commit it:"
   git add .

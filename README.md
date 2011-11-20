@@ -35,7 +35,6 @@ Create a `.pushand` file and make it executable:
     #!/usr/bin/env bash
     echo "Hello from .pushand ... this file is \$0"
     EOF
-    chmod +x .pushand
 
 Add `.pushand` to git:
 
