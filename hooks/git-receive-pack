@@ -5,9 +5,7 @@ post_receive_hook_script="$(dirname $0)/pushand_post-receive_hook"
 
 # If the remote repository doesn't exist, create it:
 if [[ ! -d $repo ]]; then
-  go_back="$(pwd)"
   mkdir -p $repo
-
   cd $repo
 
   # Initialize repository:
@@ -19,7 +17,8 @@ if [[ ! -d $repo ]]; then
   rm -f .git/hooks/post-receive
 
   ln -s $post_receive_hook_script .git/hooks/post-receive > /dev/null
-  cd $go_back
+
+  cd $(pwd)
 fi
 
 # TODO: make this dynamic using the pushand_server_variables.
