@@ -19,7 +19,7 @@ if [[ ! -d $repo ]]; then
   rm -f .git/hooks/post-receive
 
   ln -s $post_receive_hook_script .git/hooks/post-receive > /dev/null
-  cd "$go_back"
+  cd $go_back
 fi
 
 # TODO: make this dynamic using the pushand_server_variables.
