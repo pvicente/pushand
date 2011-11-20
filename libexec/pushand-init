@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# TODO: Copy `templates/deploy.sh` into the current project. It should
+#       create a config folder, and an executable `.pushand` file.
