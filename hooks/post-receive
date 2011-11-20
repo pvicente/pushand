@@ -13,4 +13,6 @@ env -i git reset --hard
 if [ -f "$repo_script" ]; then
   chmod +x $repo_script
   exec "$repo_script"
+else
+  echo "No '.pushand' file found."
 fi
