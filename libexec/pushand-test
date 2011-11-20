@@ -3,8 +3,9 @@
 if [ $1 ]; then
   SERVER=$1
 else
-  echo "Please provide the server to test. (Eg. deploy@example.com)"
-  echo "Remember setting the option NO_PUSHAND disables '.pushand' command."
+  echo "Provide the server to test. (Eg. deploy@example.com)
+!! Setting the option NO_PUSHAND disables '.pushand' command.
+!! You need sudo access because pushand is uninstalled and installed."
   exit
 fi
 
