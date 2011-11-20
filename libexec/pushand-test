@@ -21,11 +21,15 @@ echo "=> Create a local repo and push it to the server:"
 pushd $(mktemp -d /tmp/pushand.XXXXXXXXXX)
   git init
 
-  echo "=> Create a '.pushand' file and make it executable:"
-  cat > \.pushand << EOF
+  if [ ! $NO_PUSHAND ]; then
+    echo "=> Create a '.pushand' file and make it executable:"
+    cat > \.pushand << EOF
 #!/usr/bin/env bash
 echo "Hello from '.pushand' ... this file is \$0"
 EOF
+  else
+    touch "README.md"
+  fi
 
   echo "=> Add file to git and commit it:"
   git add .
