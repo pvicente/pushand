@@ -73,7 +73,7 @@ you are using `Bundler`, your `.pushand` file will look like this:
 Considering we are running a `Django` application under `passenger` and
 you are using `Virtualenv`, your `.pushand` file will look like this:
 
-```
+```bash
 #!/usr/bin/env bash
 
 DJANGO_PROJECT_PATH='<YOUR_DJANGO_PROJECT>'
