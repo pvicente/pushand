@@ -75,10 +75,12 @@ you are using `Virtualenv`, your `.pushand` file will look like this:
 
     #!/usr/bin/env bash
 
+    DJANGO_PROJECT_PATH='<YOUR_DJANGO_PROJECT>'
+
     pip install --environment vendor/virtualenv --requirement Virtualenv
 
     source vendor/virtualenv/bin/activate
-    pushd <YOUR_DJANGO_PROJECT>
+    pushd $DJANGO_PROJECT_PATH
       python manage.py syncdb
       python manage.py collectstatic --noinput
     popd
