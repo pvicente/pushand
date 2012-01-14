@@ -65,10 +65,12 @@ Examples
 Considering we are running a `Rails` application under `passenger` and
 you are using `Bundler`, your `.pushand` file will look like this:
 
-    #!/usr/bin/env bash
+```bash
+#!/usr/bin/env bash
 
-    bundle install --deployment
-    touch tmp/restart.txt
+bundle install --deployment
+touch tmp/restart.txt
+```
 
 Considering we are running a `Django` application under `passenger` and
 you are using `Virtualenv`, your `.pushand` file will look like this:
